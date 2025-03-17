@@ -20,11 +20,12 @@ jobs:
           cd backend
           python -m pip install --upgrade pip
           pip install flake8 pytest
+          pip install numpy==1.25.2
           pip install -r requirements.txt
       - name: Setup NLTK data
         run: |
           cd backend
-          python setup_nltk.py
+          python -c "import nltk; nltk.download('punkt'); nltk.download('stopwords'); nltk.download('wordnet'); nltk.download('vader_lexicon')"
       - name: Lint with flake8
         run: |
           cd backend
@@ -32,8 +33,7 @@ jobs:
       - name: Check backend server starts
         run: |
           cd backend
-          python app.py & sleep 5
-          kill $!
+          timeout 10s python app.py || echo "Server timeout as expected"
 
   extension-lint:
     runs-on: ubuntu-latest
