@@ -7,76 +7,76 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h2>Bias & Fake News Detector</h2>
-    <button id="analyze-btn">Analyze Article</button>
-    
-    <div id="results-container" style="display: none;">
-        <div class="result-section">
-            <h3>Overall Assessment</h3>
-            <p id="overall-assessment">Loading analysis...</p>
-        </div>
+    <div id="popup-container">
+        <h2>Bias & Fake News Detector</h2>
+        <button id="analyze-btn">Analyze Article</button>
         
-        <div class="result-section">
-            <h3>Political Bias</h3>
-            <div class="score-container">
-                <div class="score-display">
-                    <span id="bias-score" class="score-number">50</span><span class="score-max">/100</span>
+        <div id="results-container" style="display: none;">
+            <div class="result-section">
+                <h3>Overall Assessment</h3>
+                <p id="overall-assessment">Loading analysis...</p>
+            </div>
+            
+            <div class="result-section">
+                <div class="bias-header">
+                    <h3>Bias:</h3>
+                    <span id="bias-text" class="neutral">Neutral</span>
                 </div>
-                <div class="meter-container">
-                    <div id="bias-meter" class="meter-fill"></div>
+                <p id="bias-explanation" class="detailed-bias-explanation"></p>
+                
+                <!-- New dropdown button for topic analysis -->
+                <button id="topic-analysis-toggle" class="dropdown-button">
+                    <span>Show Topic Analysis</span>
+                    <span class="dropdown-icon">▼</span>
+                </button>
+                
+                <!-- Topic Analysis now embedded within bias section -->
+                <div id="topic-analysis-content" class="dropdown-content" style="display: none;">
+                    <div id="topic-content"></div>
                 </div>
             </div>
-            <p id="bias-text">Neutral</p>
-            <p id="bias-explanation" class="explanation"></p>
-        </div>
-        
-        <div class="result-section">
-            <h3>Sentiment</h3>
-            <div class="score-container">
-                <div class="score-display">
-                    <span id="sentiment-score" class="score-number">50</span><span class="score-max">/100</span>
+            
+            <div class="result-section">
+                <h3>Sentiment</h3>
+                <div class="score-container">
+                    <div class="score-display">
+                        <span id="sentiment-score" class="score-number">50</span>
+                        <span class="score-max">/100</span>
+                    </div>
+                    <div class="meter-container">
+                        <div id="sentiment-meter" class="meter-fill"></div>
+                    </div>
                 </div>
-                <div class="meter-container">
-                    <div id="sentiment-meter" class="meter-fill"></div>
-                </div>
+                <p id="sentiment-text" class="bias-value">Neutral</p>
+                <p id="sentiment-explanation" class="explanation"></p>
             </div>
-            <p id="sentiment-text">Neutral</p>
-            <p id="sentiment-explanation" class="explanation"></p>
-        </div>
-        
-        <div class="result-section">
-            <h3>Objectivity</h3>
-            <div class="score-container">
-                <div class="score-display">
-                    <span id="objectivity-score" class="score-number">50</span><span class="score-max">/100</span>
+            
+            <div class="result-section">
+                <h3>Objectivity</h3>
+                <div class="score-container">
+                    <div class="score-display">
+                        <span id="objectivity-score" class="score-number">50</span>
+                        <span class="score-max">/100</span>
+                    </div>
+                    <div class="meter-container">
+                        <div id="objectivity-meter" class="meter-fill"></div>
+                    </div>
                 </div>
-                <div class="meter-container">
-                    <div id="objectivity-meter" class="meter-fill"></div>
-                </div>
+                <p id="objectivity-text" class="bias-value">Balanced</p>
+                <p id="objectivity-explanation" class="explanation"></p>
             </div>
-            <p id="objectivity-text">Balanced</p>
-            <p id="objectivity-explanation" class="explanation"></p>
+            
+            <!-- Remove the standalone Topic Analysis Section since we're integrating it within bias section -->
         </div>
         
-        <!-- Topic Analysis Section (initially hidden) -->
-        <div id="topic-analysis" class="result-section" style="display: none;">
-            <h3>Topic Analysis</h3>
-            <div id="topic-content" class="analysis-content"></div>
+        <div id="loading" style="display: none;">
+            <div class="spinner"></div>
+            <p>Analyzing article...</p>
         </div>
         
-        <!-- Moral Foundations Section (initially hidden) -->
-        <div id="moral-foundations" class="result-section" style="display: none;">
-            <h3>Moral Foundations</h3>
-            <div id="moral-content" class="analysis-content"></div>
+        <div id="error-message" style="display: none;">
+            <p>Error analyzing article.</p>
         </div>
-    </div>
-    
-    <div id="loading" style="display: none;">
-        <p>Analyzing article...</p>
-    </div>
-    
-    <div id="error-message" style="display: none;">
-        <p>Error analyzing article. Please try again.</p>
     </div>
     
     <script src="popup.js"></script>

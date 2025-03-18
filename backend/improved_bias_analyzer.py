@@ -99,46 +99,226 @@ class ImprovedBiasAnalyzer:
         """
         return {
             # Economic concepts
-            "economy_left": ["regulation", "inequality", "living wage", "worker protection", 
-                             "economic justice", "wealth tax", "social safety net", "public investment"],
+            "economy_left": [
+                "regulation", "inequality", "living wage", "worker protection", 
+                "economic justice", "wealth tax", "social safety net", "public investment",
+                "minimum wage", "labor unions", "worker rights", "corporate greed",
+                "wealth redistribution", "progressive tax", "public services",
+                "economic fairness", "worker solidarity", "corporate accountability",
+                "economic democracy", "public ownership", "social welfare",
+                "economic inequality", "wealth gap", "corporate welfare",
+                "economic reform", "worker empowerment", "fair wages",
+                "economic justice", "public infrastructure", "social programs"
+            ],
             
-            "economy_right": ["deregulation", "free market", "tax cut", "fiscal responsibility", 
-                              "job creator", "economic freedom", "private sector", "trickle-down"],
+            "economy_right": [
+                "deregulation", "free market", "tax cut", "fiscal responsibility", 
+                "job creator", "economic freedom", "private sector", "trickle-down",
+                "small government", "fiscal conservatism", "market forces",
+                "economic growth", "business friendly", "entrepreneurship",
+                "private enterprise", "free enterprise", "economic liberty",
+                "market competition", "fiscal restraint", "business regulation",
+                "economic opportunity", "job growth", "market efficiency",
+                "economic prosperity", "private investment", "business climate",
+                "economic stability", "market solutions", "fiscal discipline"
+            ],
             
             # Social issues
-            "social_left": ["reproductive rights", "LGBTQ+ rights", "racial justice", "diversity", 
-                            "inclusion", "marginalized communities", "systemic racism", "police reform"],
+            "social_left": [
+                "reproductive rights", "LGBTQ+ rights", "racial justice", "diversity", 
+                "inclusion", "marginalized communities", "systemic racism", "police reform",
+                "social justice", "civil rights", "gender equality", "social equity",
+                "racial equality", "social progress", "human rights", "social change",
+                "community empowerment", "social inclusion", "racial equity",
+                "gender equity", "social reform", "civil liberties", "social equality",
+                "community justice", "social empowerment", "racial progress",
+                "gender justice", "social transformation", "civil rights movement"
+            ],
             
-            "social_right": ["traditional values", "family values", "religious freedom", "law and order", 
-                             "western civilization", "patriotism", "moral decay", "unborn"],
+            "social_right": [
+                "traditional values", "family values", "religious freedom", "law and order", 
+                "western civilization", "patriotism", "moral decay", "unborn",
+                "cultural heritage", "family structure", "moral values", "social stability",
+                "traditional marriage", "cultural preservation", "national identity",
+                "moral standards", "social order", "cultural values", "family tradition",
+                "moral principles", "social cohesion", "cultural identity", "national pride",
+                "moral foundation", "social harmony", "cultural tradition", "family values",
+                "moral compass", "social fabric", "cultural heritage"
+            ],
             
             # Health care
-            "healthcare_left": ["universal healthcare", "single-payer", "affordable care act", "medicare for all", 
-                                "public option", "healthcare equity", "prescription drug prices", "mental health care"],
+            "healthcare_left": [
+                "universal healthcare", "single-payer", "affordable care act", "medicare for all", 
+                "public option", "healthcare equity", "prescription drug prices", "mental health care",
+                "healthcare access", "healthcare reform", "public health", "healthcare justice",
+                "healthcare rights", "healthcare equality", "healthcare affordability",
+                "healthcare coverage", "healthcare system", "healthcare policy",
+                "healthcare support", "healthcare assistance", "healthcare benefits",
+                "healthcare protection", "healthcare security", "healthcare provision",
+                "healthcare services", "healthcare resources", "healthcare programs",
+                "healthcare funding", "healthcare investment", "healthcare infrastructure"
+            ],
             
-            "healthcare_right": ["market-based healthcare", "health savings accounts", "private insurance", 
-                                 "personal responsibility", "choice in healthcare", "individual mandate", "rationing"],
+            "healthcare_right": [
+                "market-based healthcare", "health savings accounts", "private insurance", 
+                "personal responsibility", "choice in healthcare", "individual mandate", "rationing",
+                "healthcare choice", "private healthcare", "healthcare freedom",
+                "healthcare competition", "healthcare innovation", "healthcare efficiency",
+                "healthcare quality", "healthcare options", "healthcare market",
+                "healthcare consumer", "healthcare provider", "healthcare cost",
+                "healthcare reform", "healthcare system", "healthcare policy",
+                "healthcare access", "healthcare coverage", "healthcare benefits",
+                "healthcare services", "healthcare resources", "healthcare programs",
+                "healthcare funding", "healthcare investment", "healthcare infrastructure"
+            ],
             
             # Environment
-            "environment_left": ["climate crisis", "green new deal", "renewable energy", "environmental justice", 
-                                 "carbon tax", "sustainability", "pollution control", "conservation"],
+            "environment_left": [
+                "climate crisis", "green new deal", "renewable energy", "environmental justice", 
+                "carbon tax", "sustainability", "pollution control", "conservation",
+                "climate action", "environmental protection", "clean energy",
+                "climate change", "environmental policy", "green technology",
+                "climate policy", "environmental regulation", "renewable resources",
+                "climate solutions", "environmental impact", "green initiatives",
+                "climate adaptation", "environmental awareness", "sustainable development",
+                "climate mitigation", "environmental conservation", "green economy",
+                "climate resilience", "environmental stewardship", "sustainable future"
+            ],
             
-            "environment_right": ["environmental overregulation", "clean coal", "energy independence", 
-                                  "job-killing regulations", "climate alarmism", "property rights", "nuclear power"],
+            "environment_right": [
+                "environmental overregulation", "clean coal", "energy independence", 
+                "job-killing regulations", "climate alarmism", "property rights", "nuclear power",
+                "energy security", "environmental balance", "economic growth",
+                "energy development", "environmental management", "resource utilization",
+                "energy production", "environmental stewardship", "economic prosperity",
+                "energy innovation", "environmental science", "resource conservation",
+                "energy efficiency", "environmental policy", "economic opportunity",
+                "energy technology", "environmental protection", "resource management",
+                "energy infrastructure", "environmental regulation", "economic development"
+            ],
             
             # Immigration
-            "immigration_left": ["pathway to citizenship", "dreamers", "asylum seekers", "family reunification", 
-                                 "undocumented immigrants", "immigration reform", "sanctuary cities"],
+            "immigration_left": [
+                "pathway to citizenship", "dreamers", "asylum seekers", "family reunification", 
+                "undocumented immigrants", "immigration reform", "sanctuary cities",
+                "immigration rights", "refugee protection", "immigration justice",
+                "immigration policy", "refugee rights", "immigration support",
+                "immigration assistance", "refugee assistance", "immigration services",
+                "immigration protection", "refugee support", "immigration resources",
+                "immigration programs", "refugee programs", "immigration benefits",
+                "immigration rights", "refugee rights", "immigration support",
+                "immigration assistance", "refugee assistance", "immigration services"
+            ],
             
-            "immigration_right": ["border security", "illegal immigration", "merit-based immigration", 
-                                  "chain migration", "illegal aliens", "amnesty", "vetting", "deportation"],
+            "immigration_right": [
+                "border security", "illegal immigration", "merit-based immigration", 
+                "chain migration", "illegal aliens", "amnesty", "vetting", "deportation",
+                "immigration control", "border protection", "immigration enforcement",
+                "immigration policy", "border security", "immigration regulation",
+                "immigration law", "border control", "immigration security",
+                "immigration system", "border enforcement", "immigration rules",
+                "immigration standards", "border management", "immigration requirements",
+                "immigration process", "border patrol", "immigration screening",
+                "immigration verification", "border control", "immigration checks"
+            ],
             
             # Foreign policy
-            "foreign_left": ["diplomacy", "international cooperation", "human rights", "foreign aid", 
-                             "peacekeeping", "multilateral", "united nations", "soft power"],
+            "foreign_left": [
+                "diplomacy", "international cooperation", "human rights", "foreign aid", 
+                "peacekeeping", "multilateral", "united nations", "soft power",
+                "international relations", "global cooperation", "peace diplomacy",
+                "international law", "global governance", "peace building",
+                "international aid", "global partnership", "peace initiatives",
+                "international support", "global development", "peace process",
+                "international engagement", "global security", "peace negotiations",
+                "international dialogue", "global stability", "peace efforts",
+                "international collaboration", "global peace", "peace resolution"
+            ],
             
-            "foreign_right": ["strong military", "america first", "national security", "defense spending", 
-                              "sovereignty", "strength", "terrorism", "interventionism", "isolationism"]
+            "foreign_right": [
+                "strong military", "america first", "national security", "defense spending", 
+                "sovereignty", "strength", "terrorism", "interventionism", "isolationism",
+                "military strength", "national defense", "security policy",
+                "military power", "national interest", "security measures",
+                "military capability", "national sovereignty", "security strategy",
+                "military readiness", "national protection", "security forces",
+                "military presence", "national security", "security operations",
+                "military defense", "national strength", "security systems",
+                "military force", "national power", "security framework"
+            ],
+
+            # Education
+            "education_left": [
+                "public education", "education equity", "student rights", "education funding",
+                "public schools", "education access", "student support", "education resources",
+                "education reform", "student success", "education programs",
+                "education policy", "student achievement", "education services",
+                "education support", "student development", "education opportunities",
+                "education system", "student learning", "education quality",
+                "education rights", "student welfare", "education benefits",
+                "education assistance", "student assistance", "education programs",
+                "education investment", "student support", "education development"
+            ],
+
+            "education_right": [
+                "school choice", "education freedom", "parental rights", "education standards",
+                "private education", "education quality", "parental control", "education excellence",
+                "education reform", "student achievement", "parental involvement",
+                "education policy", "student success", "parental choice",
+                "education system", "student learning", "parental authority",
+                "education standards", "student development", "parental responsibility",
+                "education quality", "student performance", "parental guidance",
+                "education accountability", "student progress", "parental influence",
+                "education innovation", "student growth", "parental engagement"
+            ],
+
+            # Criminal Justice
+            "criminal_justice_left": [
+                "criminal justice reform", "police accountability", "prison reform",
+                "restorative justice", "criminal justice system", "police oversight",
+                "prison rehabilitation", "justice reform", "police transparency",
+                "prison alternatives", "criminal justice policy", "police training",
+                "prison conditions", "justice system", "police reform",
+                "prison population", "criminal justice change", "police practices",
+                "prison programs", "justice initiatives", "police community",
+                "prison services", "criminal justice progress", "police relations",
+                "prison resources", "justice programs", "police accountability",
+                "prison support", "criminal justice rights", "police oversight"
+            ],
+
+            "criminal_justice_right": [
+                "law and order", "tough on crime", "police support", "criminal justice",
+                "public safety", "crime prevention", "police protection", "justice system",
+                "crime control", "law enforcement", "police authority", "criminal law",
+                "public security", "crime reduction", "police power", "legal system",
+                "crime deterrence", "law compliance", "police force", "criminal code",
+                "public order", "crime fighting", "police presence", "legal framework",
+                "crime prevention", "law maintenance", "police service", "criminal justice",
+                "public protection", "crime control", "police action", "legal authority"
+            ],
+
+            # Technology
+            "technology_left": [
+                "digital privacy", "net neutrality", "tech regulation", "data protection",
+                "digital rights", "internet freedom", "tech accountability", "privacy rights",
+                "digital access", "tech innovation", "data security", "privacy protection",
+                "digital inclusion", "tech development", "data privacy", "privacy laws",
+                "digital equity", "tech progress", "data rights", "privacy standards",
+                "digital literacy", "tech advancement", "data control", "privacy framework",
+                "digital rights", "tech growth", "data protection", "privacy measures",
+                "digital access", "tech evolution", "data security", "privacy safeguards"
+            ],
+
+            "technology_right": [
+                "tech innovation", "digital freedom", "market competition", "tech growth",
+                "digital enterprise", "tech development", "market forces", "tech advancement",
+                "digital progress", "tech industry", "market opportunity", "tech evolution",
+                "digital future", "tech leadership", "market innovation", "tech progress",
+                "digital economy", "tech sector", "market development", "tech expansion",
+                "digital transformation", "tech capability", "market potential", "tech potential",
+                "digital opportunity", "tech capacity", "market growth", "tech growth",
+                "digital innovation", "tech advancement", "market expansion", "tech development"
+            ]
         }
     
     def _count_lexicon_terms(self, text, lexicons):
@@ -252,47 +432,49 @@ class ImprovedBiasAnalyzer:
         # 3. Analyze moral foundations
         moral_results = self._analyze_moral_foundations(text)
         
-        # 4. Compare to reference sources (would be more sophisticated in a real implementation)
-        # reference_similarities = self._compare_to_reference_sources(text)
+        # Calculate bias scores for each category
+        categories = {
+            "economic": ("economy_left", "economy_right"),
+            "social": ("social_left", "social_right"),
+            "environmental": ("environment_left", "environment_right"),
+            "healthcare": ("healthcare_left", "healthcare_right"),
+            "immigration": ("immigration_left", "immigration_right"),
+            "foreign": ("foreign_left", "foreign_right"),
+            "education": ("education_left", "education_right"),
+            "criminal_justice": ("criminal_justice_left", "criminal_justice_right"),
+            "technology": ("technology_left", "technology_right")
+        }
         
-        # Calculate economic bias score
-        left_economic = lexicon_results.get("economy_left", 0)
-        right_economic = lexicon_results.get("economy_right", 0)
+        # Calculate total counts for each side
+        total_left = 0
+        total_right = 0
         
-        # Calculate social issues bias score
-        left_social = lexicon_results.get("social_left", 0)
-        right_social = lexicon_results.get("social_right", 0)
+        # Calculate category-specific biases
+        topic_bias = {}
+        for category, (left_key, right_key) in categories.items():
+            left_count = lexicon_results.get(left_key, 0)
+            right_count = lexicon_results.get(right_key, 0)
+            
+            total_left += left_count
+            total_right += right_count
+            
+            if left_count + right_count > 0:
+                category_bias = (right_count - left_count) / (left_count + right_count)
+                topic_bias[category] = {
+                    "score": category_bias,
+                    "left_terms": left_count,
+                    "right_terms": right_count
+                }
         
-        # Calculate environmental bias score
-        left_environmental = lexicon_results.get("environment_left", 0)
-        right_environmental = lexicon_results.get("environment_right", 0)
-        
-        # Calculate healthcare bias score
-        left_healthcare = lexicon_results.get("healthcare_left", 0)
-        right_healthcare = lexicon_results.get("healthcare_right", 0)
-        
-        # Calculate immigration bias score
-        left_immigration = lexicon_results.get("immigration_left", 0)
-        right_immigration = lexicon_results.get("immigration_right", 0)
-        
-        # Calculate foreign policy bias score
-        left_foreign = lexicon_results.get("foreign_left", 0)
-        right_foreign = lexicon_results.get("foreign_right", 0)
-        
-        # Calculate framing bias
+        # Add framing bias
         left_framing = framing_results.get("left_frames", 0)
         right_framing = framing_results.get("right_frames", 0)
-        
-        # Calculate total counts
-        total_left = (left_economic + left_social + left_environmental + 
-                      left_healthcare + left_immigration + left_foreign + left_framing)
-        
-        total_right = (right_economic + right_social + right_environmental + 
-                       right_healthcare + right_immigration + right_foreign + right_framing)
+        total_left += left_framing
+        total_right += right_framing
         
         total_terms = total_left + total_right
         
-        # Calculate bias score (from -1 liberal to 1 conservative)
+        # Calculate overall bias score (from -1 liberal to 1 conservative)
         if total_terms > 0:
             bias_score = (total_right - total_left) / total_terms
         else:
@@ -326,39 +508,17 @@ class ImprovedBiasAnalyzer:
                 moral_profile[foundation] = count / total_moral
         
         # Generate detailed explanation
-        topic_bias = {}
-        
-        # Economic bias
-        if left_economic + right_economic > 0:
-            economic_bias = (right_economic - left_economic) / (left_economic + right_economic)
-            topic_bias["economic"] = {
-                "score": economic_bias,
-                "left_terms": left_economic,
-                "right_terms": right_economic
-            }
-        
-        # Social issues bias
-        if left_social + right_social > 0:
-            social_bias = (right_social - left_social) / (left_social + right_social)
-            topic_bias["social"] = {
-                "score": social_bias,
-                "left_terms": left_social,
-                "right_terms": right_social
-            }
-            
-        # Add other topics similarly
-        
-        # Generate explanation
         explanation = f"This content appears to be {bias_category.lower()}, "
         
         # Add topic-specific explanations
-        if "economic" in topic_bias:
-            economic_leaning = "right-leaning" if topic_bias["economic"]["score"] > 0 else "left-leaning"
-            explanation += f"with {economic_leaning} economic framing. "
-            
-        if "social" in topic_bias:
-            social_leaning = "right-leaning" if topic_bias["social"]["score"] > 0 else "left-leaning"
-            explanation += f"Social issues are presented with a {social_leaning} perspective. "
+        significant_topics = []
+        for category, data in topic_bias.items():
+            if data["left_terms"] + data["right_terms"] > 2:  # Only include topics with significant mentions
+                leaning = "right-leaning" if data["score"] > 0 else "left-leaning"
+                significant_topics.append(f"{category.replace('_', ' ')} is {leaning}")
+        
+        if significant_topics:
+            explanation += f"with {', '.join(significant_topics)}. "
         
         # Add moral foundations information
         if moral_profile:
